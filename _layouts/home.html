@@ -19,6 +19,8 @@
       </div>
     </div>
 
+
+
     <header class="site-header">
 
       <div class="wrapper">
@@ -43,7 +45,7 @@
     seconds = ("0" + seconds).slice(-2);
     var secondSel = document.querySelector(".seconds");
 
-    secondSel.style.transform = "rotate(" + sdegree + "deg) translate(160px) rotate(-" + sdegree + "deg)";
+    secondSel.style.transform = "rotate(" + sdegree + "deg) translate(70px) rotate(-" + sdegree + "deg)";
     secondSel.innerHTML = seconds;
 
     var minutes = new Date().getMinutes();
@@ -51,7 +53,7 @@
     var minutesSel = document.querySelector(".minutes");
     minutes = ("0" + minutes).slice(-2);
 
-    minutesSel.style.transform = "rotate(" + mdegree + "deg) translate(181px) rotate(-" + mdegree + "deg)";
+    minutesSel.style.transform = "rotate(" + mdegree + "deg) translate(50px) rotate(-" + mdegree + "deg)";
     minutesSel.innerHTML =  minutes;
 
     var hours = new Date().getHours();

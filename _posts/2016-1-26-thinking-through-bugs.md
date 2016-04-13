@@ -24,5 +24,5 @@ categories:
 ####7. If the trouble cannot be found, or the problem is thought to lie outside the scope of one's knowledge or local resources, come up with a question that describes the closest we can get to the problem. 
   *For example, one with no experience in car repair might say, "my car doesn't stop when I stomp on the brake, and I have no idea why" and a weekend do-it-yourselfer might say, "my car doesn't stop when I stomp on the brake and I've checked the brake fluid, bled the lines and regreased the calipers and boots and this issue is somewhere out of my level of expertise" while a mechanic might say, "you've got a bad master cylinder, and it is going to cost you a lot of money, which is fortunate for me because I am saving up for a boat."
 
-####8. Giving a bit of background on the problem and the level to which the problem was tracked, we go to someone with deeper knowledge for help. In the case of OCS, I will ask Sumeet or one of the TAs in a comment on GitHub, an email, or in person while in class. 
+####8. Giving a bit of background on the problem and the level to which the problem was tracked, we go to someone with deeper knowledge for help. 
 
