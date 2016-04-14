@@ -1,45 +1,70 @@
-# Send and Receive SMS Using the Twilio API
+---
+layout: post
+title:  "Sending and Receiving SMS with the Twilio API"
+date:   2016-04-14 13:22:17
+categories:
+---
 
 You’ve built an application that needs to send and receive text messages. Lucky for you, there is an API for that! In this short tutorial, you will learn how to connect your Rails application to the Twilio API.
 
 ## First, set up a Twilio account
 
-- Go to <a href=”http://www.twilio.com”>Twilio</a>’s website
+- Go to [Twilio](http://www.twilio.com)’s website
 - Make an account and add a phone number
 
 I chose a number with my local area code, and named it after my application on the ‘Phone Numbers’ tab of Twilio’s site. You will need the number to have SMS enabled, so be sure the number has SMS listed as a ‘capability’ on the detail view under the Phone Numbers tab on the Twilio site.
 
 You now have a trial account, and you can confirm only one personal number for your application to communicate with before being required to purchase anything. For the purpose of testing your application, add and follow the instructions to confirm your own cell phone number. 
 
--After confirming your phone, go to the Dev Tools tab on the Twilio site, then click on the ‘API Explorer’ tab beneath that.
+- After confirming your phone, go to the Dev Tools tab on the Twilio site, then click on the ‘API Explorer’ tab beneath that.
 
-<img src=”https://goo.gl/photos/EKEb8KN9Xh6ycAdx5”>
+
+
+![API Explorer](/assets/Dev-tools-api-explorer.png)
+
+
 
 - You should see a Send Message page, where you can enter a ‘To’ number under ‘Parameters’.
 
-<img src=”https://goo.gl/photos/hULVwSSh3t9RtRaH9”>
+
+
+![Send Message Form](/assets/Explorer-send-message.png)
+
+
 
 - Enter your number, and type a message into the ‘Body’ textbox. You can also insert an image URL into the appropriate box if you like. 
 - Go to the bottom of the page, taking note for future reference of the copyable code in the programming language you select. 
 Example:
 
-<img src=”https://goo.gl/photos/LZKaisffspniJrgv6”>
+
+
+![API Explorer](/assets/Request-sample-code.png)
+
+
 
 An example of the Ruby code looks something like:
-   ```ruby
-require 'rubygems' # not necessary with ruby 1.9 but included for completeness 
-require 'twilio-ruby' 
+
+```ruby
+
+   require 'rubygems' 
+```
+
+*not necessary with ruby 1.9 but included for completeness* 
+
+   require 'twilio-ruby' 
  
-# put your own credentials here 
+*Put your own credentials here:*
+
 account_sid = 'AC7f31bedb178e5c82381712d702187f19' 
 auth_token = '[AuthToken]' 
  
-# set up a client to talk to the Twilio REST API 
+## Set up a client to talk to the Twilio REST API 
+
 @client = Twilio::REST::Client.new account_sid, auth_token 
  
 @client.account.messages.create({
-  :from => '+14025551212',    
-})
+  :from => '+14025551212',
+  })
 
    ```
 - Click the ‘Make Request’ button. You will only be able to text to the number that you confirmed earlier.
@@ -54,13 +79,14 @@ Take a sip of coffee, and you will receive a text message!
 - Example, in `.env` file:
 
 
-   ```
+   ```ruby
    TWILIO_ACCOUNT_ID=foo
    TWILIO_AUTH_TOKEN=foo
-```
+   ```
 
 - And in your `.env.local` file, put your real credentials. These will be ignored by Git, and so will not be visible to anyone else publicly:
-   ```
+
+   ```ruby
    TWILIO_ACCOUNT_ID='AC7f31bedb178#####################'
    TWILIO_AUTH_TOKEN='0b67f2ae87cae#####################'
    ```
